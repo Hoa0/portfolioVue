@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+</head>
+
+<body>
+
+    <input type="text" name="newEvent" placeholder="taak toevoegen" id="newEvent">
+    <input type="submit" id="sendEvent" value="voeg toe">
+
+    <section id="containerTask">
+        <h2>Alle activiteiten</h2>
+
+    </section>
+
+    <section id="containerDays">
+        <article class="day">
+            <h2>Maandag</h2>
+        </article>
+        <article class="day">
+            <h2>Dinsdag</h2>
+        </article>
+        <article class="day">
+            <h2>Woensdag</h2>
+        </article>
+        <article class="day">
+            <h2>Donderdag</h2>
+        </article>
+        <article class="day">
+            <h2>Vrijdag</h2>
+        </article>
+        <article class="day">
+            <h2>Zaterdag</h2>
+        </article>
+        <article class="day">
+            <h2>Zondag</h2>
+        </article>
+    </section>
+
+
+    <script type="module" src="task.js"></script>
+</body>
+
+</html>
+
+<style>
+    body {
+        background-color: rgb(233, 233, 233);
+    }
+    h2{
+        text-align: center;
+    }
+    #containerTask{
+        width: 10rem;
+        background-color: #ffd16c;
+        /* height: 10rem; */
+    }
+
+    #containerDays {
+        display: grid;
+        grid-column-gap: 0.5rem;
+        grid-template-columns: repeat(5, auto);
+    }
+
+    .day {
+        width: 10rem;
+        height: max-content;
+        /* border: 0.2em solid #7c6262; */
+        background: rgb(207, 207, 207);
+        padding: 0.5em;
+        margin: 0.5em;
+    }
+
+    .day.hovered {
+        background: #ffd16c;
+        border-style: dashed;
+    }
+
+    .item {
+        display: block;
+        width: 140px;
+        height: 140px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: grab;
+    }
+
+    .item.hold {
+        border: 5px solid #47b8e0;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+</style>
